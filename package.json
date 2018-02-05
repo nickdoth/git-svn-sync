@@ -1,0 +1,20 @@
+{
+  "name": "git-svn-sync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "shelljs": "^0.7.8"
+  },
+  "bin": {
+    "gsvn-push": "bin/git-svn-push",
+    "gsvn-pull": "bin/git-svn-pull",
+    "gsvn-meld": "bin/git-svn-meld"
+  }
+}
