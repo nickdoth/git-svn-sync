@@ -17,7 +17,7 @@ const rebase = () => {
 
 ensureClean(() => {
     if (isValidDCommitSource(branch)) {
-        echo("Perform git svn rebase...".green);
+        echo('** '.green + 'Perform git svn rebase...'.bold);
         rebase();
     }
     else {

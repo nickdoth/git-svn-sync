@@ -9,7 +9,7 @@ exports.ensureClean = function(job) {
     let isClean = !stat.stdout.trim();
 
     if (!isClean) {
-        echo("pushing stash changes...");
+        echo('-> '.cyan + 'pushing stash changes...'.bold);
         critical(exec('git add .', { silent: true }), 'Fatal: Cannot add changes to index, exit');
         critical(exec('git stash',  { silent: true }), 'Fatal: Cannot stash your changes, exit');
     }
@@ -17,7 +17,7 @@ exports.ensureClean = function(job) {
     job();
 
     if (!isClean) {
-        echo("popping stash...");
+        echo('<- '.cyan + 'popping stash...'.bold);
         exec('git stash pop', { silent: true });
     }
 }

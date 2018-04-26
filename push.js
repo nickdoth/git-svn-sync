@@ -10,7 +10,7 @@ let dcommit = () => exec('git svn dcommit');
 
 ensureClean(() => {
     if (isValidDCommitSource(branch)) {
-        echo('SVN Diff Commit...'.green);
+        echo('** '.green + 'Perform git svn dcommit...'.bold);
         dcommit();
     }
     else {
