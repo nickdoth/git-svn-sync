@@ -15,6 +15,6 @@ ensureClean(() => {
     }
     else {
         echo(`Fatal: You must rebase the \`master\` branch or`.red);
-        echo(`a branch that is starting with \`@\` (which is indicating a svn-tracking branch)`.red);
+        echo(`a branch that is starting with \`@\` (which indicates a svn-tracking branch)`.red);
     }
 });
